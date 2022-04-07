@@ -1,0 +1,106 @@
+/*****carrousel 3d avec navigation*****/
+
+*{box-sizing: border-box}
+
+
+img{max-width:100%}
+	
+	
+	
+	
+	
+.caroussel_diapo input{position:absolute;left:-9999px}
+    
+
+.caroussel_diapo{	
+position:static;
+text-align:center;
+margin:0 auto}
+
+
+.contenu_carou {
+
+width:500px;
+height:332px;
+
+
+perspective:4000px}
+
+
+.caroussel{
+
+transform-style:preserve-3d;
+position:static;
+width:500px;
+height:332px;
+transition:1s
+	
+	}
+
+.caroussel img {
+	
+position:absolute;
+top:0;left:0;
+outline:1px solid transparent;
+backface-visibility:hidden;
+transition:1s
+	
+	}
+
+.caroussel img{filter:blur(3px);opacity:.8}	
+.caroussel img:nth-child(1){transform:translate3d(0,0,675px) scale(.6)}
+.caroussel img:nth-child(2){transform:rotateY(36deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(3){transform:rotateY(72deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(4){transform:rotateY(108deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(5){transform:rotateY(144deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(6){transform:rotateY(180deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(7){transform:rotateY(216deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(8){transform:rotateY(252deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(9){transform:rotateY(288deg) translateZ(675px) scale(.6)}
+.caroussel img:nth-child(10){transform:rotateY(324deg) translateZ(675px) scale(.6)}
+
+.caroussel_diapo input[type=radio] + label {
+	
+cursor:pointer;
+background:hsl(203,77%,81%);
+display:inline-block;
+width:20px;
+border-radius:50%;
+height:20px
+	
+	}
+	
+.caroussel_diapo input[type=radio]:checked + label{background:hsl(203,77%,61%)}
+
+.caroussel_diapo label{background:hsl(203,77%,61%)}
+
+
+
+.caroussel_diapo input[name="rotation"]:checked ~ .contenu_carou .caroussel img:nth-child(n){
+	filter:drop-shadow(12px 12px 7px hsla(0,0%,0%,.5))
+	
+	}	
+
+/*gauche*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px)}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-36deg)}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-72deg)}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-108deg)}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-144deg)}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-180deg)}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-216deg)}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-252deg)}
+.caroussel_diapo #carou_neuf:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-288deg)}
+.caroussel_diapo #carou_dix:checked ~ .contenu_carou .caroussel{transform:translateZ(-675px) rotateY(-324deg)}
+
+/*droite*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel img:nth-child(1){transform:translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel img:nth-child(2){transform:rotateY(36deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel img:nth-child(3){transform:rotateY(72deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel img:nth-child(4){transform:rotateY(108deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel img:nth-child(5){transform:rotateY(144deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel img:nth-child(6){transform:rotateY(180deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel img:nth-child(7){transform:rotateY(216deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel img:nth-child(8){transform:rotateY(252deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_neuf:checked ~ .contenu_carou .caroussel img:nth-child(9){transform:rotateY(288deg) translateZ(675px) scale(1);opacity:1}
+.caroussel_diapo #carou_dix:checked ~ .contenu_carou .caroussel img:nth-child(10){transform:rotateY(324deg) translateZ(675px) scale(1);opacity:1}

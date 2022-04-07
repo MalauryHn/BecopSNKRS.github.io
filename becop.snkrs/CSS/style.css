@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body{
+	margin:  auto;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 25px;
+	background-color: #9A9A9A;
+}
+
+/*Barre de navigation*/
+
+nav{
+	width: 100%;
+	display:  flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #6B6B6B;
+	position:  sticky;
+	top: 0;
+	padding: 0px;
+	margin-top: -10px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 15px;
+	font-size: 30px;
+}
+
+nav .logo{
+	margin-top: 10px;
+}
+
+nav h1{
+	margin-top: 15px;
+}
+
+nav img{
+	width: 70px;
+	margin-bottom: -15px;
+}
+
+nav .onglets{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 25px;
+}
+
+nav #searchbar{
+	margin-top: -20px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding: 10px;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	background-color: #9A9A9A;
+}
+
+nav #cart{
+	width: 40px;
+	margin-top: 5px;
+}
+
+/*Fin de la barre de navigation*/
+
+/*Shopping cards*/
+
+.card{
+	border-radius: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.card_text{
+	margin-top: 130px;
+}
+
+.addtocart{
+	width: 40px;
+}
+/*Fin des Shopping cards*/
+
+.caroussel_text{
+}
+
+.blank{
+	margin-top: -30px;
+}
+
+.corps{
+	width:  70%;
+}
